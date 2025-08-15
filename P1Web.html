@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Huellitas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style> 
+      nav{
+        background-color: #2B5288;
+        text-align: center;
+        padding: 10px;
+      }
+      nav a {
+        color: white;
+        margin: 15px;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      nav a.active {
+        color: rgb(0, 0, 0); /* Color cuando está activo */
+        text-decoration: underline;
+      }
+
+      section{
+        display:none;
+        padding: 20px;
+      }
+      section.active {
+        display: block; 
+      }
+      input, textarea {
+        display: block;
+        margin-bottom: 10px;
+        padding: 8px;
+        width: 100%;
+        max-width: 400px;
+      }
+      button {
+        padding: 8px 15px;
+        background-color: #2B5288;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #2B5288;
+      }
+    </style>
+</head>
+<body>
+<header>
+        <h1>Bienvenidos a la Comunidad</h1>
+</header>
+
+<nav class="mainNav">
+        <a onclick="mostrarSeccion('Huellitas', this)">Huellitas</a>
+        <a onclick="mostrarSeccion('Eco-Tips', this)">Eco Tips</a>
+        <a onclick="mostrarSeccion('Alertas', this)">Alertas</a>
+        <a onclick="mostrarSeccion('Evento', this)">Eventos</a>
+</nav>
+
+<section id="Huellitas" class="active" >
+    <h2 >Huellitas</h2>
+    <nav class="subnav">
+        <a onclick="mostrarSubtip('alimentacion', this)">Alimentación</a>
+        <a onclick="mostrarSubtip('hogar', this)">Su Espacio</a>
+        <a onclick="mostrarSubtip('salud', this)">Salud</a>
+        <a onclick="mostrarSubtip('higiene', this)">Higiene</a>
+    </nav>
+
+    <div id="alimentacion"  class="subtip active">
+    <h3>¿Qué Darles? </h3>
+    <p>
+        Una excelente manera de ser "eco" con las sobras es compartir con tu perro, pero es crucial saber
+         qué alimentos son seguros para su consumo y cuáles no. Esto te ayudará a evitar visitas inesperadas
+        al veterinario y a mantener a tu perro sano y feliz. 
+        Una alimentación adecuada es crucial para la salud
+         y bienestar general de los perros, ya que les proporciona la energía y nutrientes necesarios para crecer,
+          desarrollarse y mantenerse fuertes y activos.
+    </p>
+
+    <div class="contenedor-alimentacion">
+        <!-- Mitad izquierda -->
+        <div class="columna">
+            <h4>Proteínas (sin condimentos)</h4>
+            <ul>
+                <li><strong>Carne de Pollo:</strong> cocido o desmenuzado </li>
+                <li><strong>Pescado:</strong> Salmón, atún o sardinas (en agua, sin aceite ni sal)</li>
+                <li><strong>Huevos:</strong> Cocidos (revueltos o duros)</li>
+            </ul>
+            <img src="imagenes/saludableComid.jpeg" alt="Comida Saludable" width="200" class="margenImagen">
+
+            <h4>Frutas y verduras (sin semillas)</h4>
+            <ul>
+                <li><strong>Zanahorias:</strong> Crudas o cocinadas</li>
+                <li><strong>Manzana:</strong> Sin corazón ni semillas</li>
+                <li><strong>Calabaza:</strong> Cocida y en puré</li>
+                <li><strong>Espinacas:</strong> Cocidas en pequeñas porciones</li>
+                <li><strong>Brócoli:</strong> En pequeñas cantidades y cocido</li>
+            </ul>
+        <img src="imagenes/alimentosHuella.jpeg" alt="Comida Saludable" width="200" class="margenImagen">
+
+            <h4>Cereales y lácteos (con moderación)</h4>
+            <ul>
+                <li><strong>Avena:</strong> Cocida y sin azúcar</li>
+                <li><strong>Arroz:</strong> blanco o integral (Cocido)</li>
+                <li><strong>Yogur:</strong> natural sin azúcar (sin xilitol)</li>
+            </ul>
+            <img src="imagenes/salud.jpeg" alt="Comida Saludable" width="200" class="margenImagen">
+
+
+        </div>
+
+        <!-- Mitad derecha -->
+        <div class="columna">
+            <h4>Croquetas (Alimento Seco)</h4>
+            <ul>
+                <li><strong>Económicas y prácticas:</strong> Suelen ser la opción más asequible y
+                     tienen una larga vida útil, lo que las hace fáciles de almacenar.</li>
+                <li><strong>Salud dental:</strong> La textura crujiente de las croquetas ayuda a reducir
+                     la placa y el sarro, contribuyendo a la salud bucal de tu perro</li>
+                <li><strong>Nutrición completa:</strong> Las marcas de calidad están formuladas para ser 
+                    nutricionalmente completas y balanceadas, cubriendo todos los requerimientos vitamínicos y minerales.</li>
+            </ul>
+            <img src="imagenes/croquetas.jpeg" alt="Croquetas" width="200" class="margenImagen">
+
+
+            <h4>Enlatados y sobres (Alimento húmedo)</h4>
+            <h5>Ventajas:</h5>
+            <ul>
+                <li><strong>Ingesta:</strong>  Suelen tener un sabor y aroma más intensos, 
+                    lo que los hace ideales para perros con poco apetito o que son mayores 
+                    y tienen problemas dentales.</li>
+                <li><strong>Mayor hidratación:</strong> Su alto contenido de agua es beneficioso para perros que
+                     no beben suficiente agua, o aquellos con problemas renales o urinarios.</li>
+            </ul>
+            <h5>Desventajas:</h5>
+            <ul>
+                <li><strong>Mayor costo:</strong> Son significativamente más caros que las croquetas.</li>
+                <li><strong>Menor durabilidad:</strong> Una vez abiertos, necesitan refrigeración y se echan a perder más rápido.
+                    No se pueden dejar en el plato por mucho tiempo..</li>
+                <li><strong>No ayudan a la salud dental:</strong> Su textura suave no contribuye a la limpieza de los dientes.</li>
+            </ul>
+            <img src="imagenes/lataAlim.jpeg" alt="Enlatados" width="100" class="margenImagen">
+
+        </div>
+    </div>
+
+    <h3>Alimentos prohibidos</h3>
+     <div class="contenedor-flex">
+    <p class="text1">
+    El chocolate es malo para los perros porque
+     el cacao contiene dos sustancias tóxicas para 
+     ellos. Son la teobromina y la mucho más conocida cafeína.
+      Ambas son alcaloides, en concreto metilxantinas. Además, 
+      el chocolate contiene también azúcares y grasas, en mayor
+       o menor proporción según el tipo. El azúcar nunca debe formar 
+       parte de la dieta de los perros y un consumo excesivo de
+     grasas puede provocar una inflamación del páncreas, denominada
+      pancreatitis, que es una enfermedad de gravedad que tiene que 
+      tratar el veterinario.
+    </p>
+    <img src="imagenes/chocolate.jpeg" alt="Descripción de la imagen" width="400" class="margenImagen">
+    </div>
+  
+     <div class="contenedor-flex">
+    <img src="imagenes/cebolla.jpeg" alt="Descripción de la imagen" width="400" class="margenImagen">
+    <p class="text1">
+    La cebolla y el ajo contienen compuestos llamados tiosulfatos.
+     Cuando un perro ingiere estos compuestos, el tiosulfato daña 
+     sus glóbulos rojos, lo que causa su destrucción. Este proceso 
+     se conoce como anemia hemolítica.
+    La anemia hemolítica es una condición grave donde la sangre del 
+    perro no puede transportar suficiente oxígeno a los tejidos, lo
+     que afecta a órganos vitales. A diferencia de las personas, 
+     los perros no tienen la enzima necesaria para procesar estos
+      compuestos de manera segura.
+    </p>
+    </div>
+
+     <div class="contenedor-flex">
+    <p class="text1">
+    La toxicidad de las uvas y pasas no depende de la cantidad, ya 
+    que incluso una pequeña porción puede ser suficiente para causar
+     una reacción grave en algunos perros. Tampoco se ha encontrado 
+     una relación clara con el peso o el tamaño del perro. Lo que sí 
+     se sabe es que pueden causar un daño irreversible en los riñones.
+    Los expertos sugieren que es mejor evitar por completo que los 
+    perros coman uvas o pasas, sin importar su tamaño o la cantidad. 
+    El riesgo es demasiado alto.
+    </p>
+    <img src="imagenes/pasa.jpeg" alt="Descripción de la imagen" width="400" class="margenImagen">
+    </div>
+
+     <div class="contenedor-flex">
+    <img src="imagenes/huesos.jpeg" alt="Descripción de la imagen" width="400" class="margenImagen">
+    <p class="text1">
+    Darle huesos cocidos a tu perro es muy peligroso, sin importar 
+    de qué animal provengan. El calor del cocinado hace que los 
+    huesos se vuelvan quebradizos y propensos a astillarse. Estas 
+    astillas afiladas pueden causar perforaciones internas en el
+     sistema digestivo de tu perro, lo que puede llevar a infecciones,
+      hemorragias e incluso la muerte.
+    </p>
+    </div>
+
+    </div>
+
+    <div id="hogar" class="subtip">
+        <h3>Creemos su espacio seguro</h3>
+        <p >Puedes crear una cama cómoda y personalizada usando
+                 materiales que probablemente ya tienes en casa o que 
+                 puedes conseguir de forma muy barata.</p>
+    <div class="contenedorEspacio">
+        <div class="columna">
+         <h4>Cama con caja de madera</h4>   
+            <img src="imagenes/CamaD.1.jpeg" alt="Cama con caja" width="200" class="margenImagen" class="margenImagen">
+         <h4>Cama con llanta</h4>  
+            <img src="imagenes/CamaD.2.jpeg" alt="Cama con llanta" width="200"class="margenImagen" class="margenImagen">
+
+        </div>
+        
+        
+         <div class="columna">           
+         <ul>
+                <li> <strong>Cama con una caja de cartón:</strong> Si tienes una caja de 
+                    cartón grande y resistente, puedes forrarla con una
+                     manta suave y una almohada vieja. Corta una de las
+                      paredes de la caja para que tu perro pueda entrar 
+                      y salir fácilmente. Es una solución temporal y muy
+                       económica.</li>
+                <li> <strong>Cama con una maleta vieja: </strong> Si tienes una maleta que
+                     ya no uses, puedes convertirla en una cama con estilo.
+                      Simplemente abre la maleta, retira el forro interior 
+                      si es necesario, y coloca una almohada o un cojín en 
+                      el fondo. Es ideal para razas pequeñas o medianas.</li>
+                <li> <strong>Cama con un neumático reciclado:  </strong> Si tienes acceso 
+                    a un neumático viejo, puedes lavarlo y pintarlo con pintura no tóxica.
+                     Una vez seco, coloca un cojín redondo que encaje en el interior. 
+                     Es una cama muy resistente y duradera, perfecta para perros grandes 
+                     o activos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p>No necesitas comprar una cama de perro costosa. Puedes usar objetos que ya
+             tienes en casa para crear un lugar cómodo.</p>
+    <div class="contenedorEspacio2">
+     <div class="columna"> 
+             <ul>
+                <li> <strong>Mantas y sábanas viejas:</strong>
+                     Cualquier manta o sábana que ya no uses puede ser perfecta.
+                      Simplemente dóblala para crear una superficie suave. Puedes 
+                      tener varias para cambiarlas y lavarlas fácilmente.</li>
+                <li> <strong>Almohadas y cojines: </strong> 
+                    Utiliza almohadas o cojines viejos y cúbrelos con fundas
+                     resistentes que puedas lavar. Esto le dará un soporte suave
+                      a tu perro y mantendrá el espacio limpio.</li>   
+             </ul>           
+        </div>
+      <div class="columna">
+        <h4>Cama con sabanas y almohadas</h4>   
+            <img src="imagenes/Sabanas1.jpeg" alt="Cama sabanas" width="200" class="margenImagen">
+
+      </div>
+        </div>
+        <p>Coloca la cama de tu perro en un rincón <strong>tranquilo</strong> de la casa, lejos del tráfico constante de la gente, 
+            que no sea <strong>demasiado frío ni demasiado caluroso.</strong> Evita las corrientes de aire, las ventanas con mucho sol directo o
+             los pasillos donde se sienta el frío del suelo.</p>
+        
+        </div>
+   
+    <div id="salud" class="subtip">
+        <h3>Su salud</h3>
+        <p>Cuidar de la salud de tu perro 
+            es la mejor manera de demostrarle
+             tu amor. Un perro sano es un perro 
+             feliz que disfruta de una vida activa.
+              Al mantener al día sus vacunas, ofrecerle
+               una nutrición adecuada y ejercicio,
+                no solo previenes enfermedades costosas,
+                 sino que también fortaleces el vínculo
+                  entre ambos. Un perro bien cuidado tiene
+                   mayores probabilidades de vivir más años,
+                    permitiéndote disfrutar de su compañía por
+                     mucho más tiempo.</p>
+    <div class="contSalud">
+         <div class="columna"> 
+            <h4>Visitas al veterinario</h4>
+         <ul>
+                <li> <strong>Revisiones anuales:</strong> 
+                    Llevar a tu perro a chequeos anuales permite 
+                    detectar a tiempo posibles enfermedades o 
+                    problemas de salud. El veterinario puede 
+                    realizar un examen físico completo, revisar 
+                    el peso y el estado general de tu mascota.</li>
+                <li> <strong>Vacunas y desparasitación: </strong> 
+                     Mantén el calendario de vacunas y desparasitación 
+                     (interna y externa) al día. Esto protege a tu perro
+                      de enfermedades comunes y parásitos como pulgas, 
+                      garrapatas y gusanos intestinales..</li>
+                <li> <strong>Esterilización o castración:</strong>
+                 Además de ayudar a controlar la sobrepoblación,
+                  la esterilización puede prevenir ciertas enfermedades
+                  , como infecciones uterinas y tumores de mama 
+                  en las hembras, y problemas de próstata en los machos.</li>
+            </ul>
+    <img src="imagenes/veter.jpeg" alt="Salud canina" width="300" class="margenImagen">
+ 
+            <h4>Ejercicio y estimulación</h4>
+             <ul>
+                <li> <strong>Paseos diarios:</strong>
+                Los paseos son esenciales. No solo sirven para
+                 que haga sus necesidades, sino que le dan la 
+                 oportunidad de socializar, explorar y quemar
+                  energía.</li>
+                <li> <strong>Juegos en casa: </strong> 
+                 Dedica tiempo a jugar con él. Los juegos de
+                  buscar, de cuerda o con juguetes interactivos
+                   mantienen su mente activa y fortalecen el vínculo 
+                   entre ustedes.</li>   
+             </ul>  
+    <img src="imagenes/estimul.jpeg" alt="Salud canina" width="300" class="margenImagen">
+         
+        </div>
+    </div>
+    </div>
+    <div id="higiene" class="subtip">
+        <h3>Higiene canina</h3>
+        <p>Una buena higiene es fundamental
+             para la salud y el bienestar de
+            tu perro. Mantenerlo limpio va 
+            más allá de un simple baño; el
+            cepillado regular, el cuidado 
+            dental y la limpieza de sus oídos
+             y uñas previenen problemas de salud
+            y te ayudan a detectar posibles 
+            anomalías a tiempo. Con una rutina
+            de higiene constante, aseguras que
+            tu perro no solo esté limpio y cómodo,
+             sino que también viva una vida más 
+            feliz y sana.</p>
+
+            <div class="claseBaño"><p><strong>Baño</strong></p>
+            <p>Bañar a tu perro es necesario, 
+                pero no debe ser algo muy frecuente
+                 para no eliminar los aceites naturales 
+                 de su piel, que la protegen y mantienen
+                  su pelaje sano.</p> </div>          
+   
+        <div class="columnas-contenedorHigiene">
+            <div class="columna">
+                <p><strong>Frecuencia:</strong> Generalmente, 
+                se recomienda bañar a los perros 
+                cada dos o tres meses, pero a veces es 
+            preferible báñarlo solo cuando sea realmente necesario.
+            A veces bañarlo en exceso puede resecar su piel.</p>
+            </div>
+            <div> <img src="imagenes/baño.jpeg" alt="baño perro" width="200" class="margenImagen"></div>
+            <div class="columna">
+                <p><strong>Productos:</strong>Usa
+                     un champú específico para perros. 
+                     O también puedes bañar a tu perro con 
+                     un champú neutro para bebés, que es
+                     suave para su piel y no tiene químicos 
+                     agresivos</p>  
+            </div>
+              <div> <img src="imagenes/champu.jpeg" alt="shampoo" width="200" class="margenImagen"></div>
+            <div class="columna">
+                <p><strong>Secado:</strong>Seca bien 
+                    a tu perro con una toalla que ya no uses 
+                o con alguna playera de algodon vieja a la quepuedas darle 
+            ese nuevo uso. Otra opción es en caso de que haga buen tiempo,
+             déjalo secar al sol mientras juegas con él para que no se resfríe.</p>  
+            </div>
+              <div> <img src="imagenes/secar.jpeg" alt="secarlo" width="200" class="margenImagen"></div>
+        </div>
+
+
+        <div class="claseBaño">
+            <p><strong> Cepillado de pelo</strong></p>
+            <p>El cepillado regular es clave para mantener un pelaje
+                 saludable y sin nudos..</p> </div>          
+   
+        <div class="columnas-contenedorHigiene">
+            <div class="columna">
+                <p><strong>Frecuencia:</strong> Cepíllalo 
+                    una o dos veces por semana para perros 
+                    de pelo corto y diariamente si tiene el 
+                    pelo largo, para evitar enredos grandes.</p>
+            </div>
+             <div> <img src="imagenes/cepillar.jpeg" alt="baño perro" width="100" class="margenImagen"></div>
+
+            <div class="columna">
+                <p><strong>Beneficios:</strong> El cepillado 
+                    ayuda a eliminar el pelo muerto, la suciedad 
+                    y los enredos. Además, distribuye los aceites 
+                    naturales de la piel y es una excelente oportunidad
+                     para revisar la piel de tu perro en busca de bultos, 
+                     heridas o parásitos como pulgas y garrapatas.</p>  
+            </div>
+         <div> <img src="imagenes/cepillo.jpeg" alt="baño perro" width="200" class="margenImagen"></div>
+
+            <div class="columna">
+                <p><strong>Herramientas:</strong>Puedes usar un cepillo 
+                    de cerdas o incluso un guante de goma si tu perro 
+                    tiene el pelo corto. Un peine de metal con dientes 
+                    anchos funciona muy bien para desenredar sin tirones.</p>  
+            </div>
+        </div>
+
+        <div class="claseBaño">
+            <p><strong> Cuidado dental casero</strong></p>
+            <p>El cuidado dental es muy importante y no tiene que ser costoso.</p> 
+        </div>          
+   
+        <div class="columnas-contenedorHigiene">
+            <div class="columna">
+                <p><strong>Cepillado:</strong> No necesitas un cepillo especial. 
+                    Puedes usar un cepillo de dientes de bebé o incluso envolver 
+                    una gasa limpia alrededor de tu dedo. En lugar de una pasta dental 
+                    cara, puedes usar una mezcla de bicarbonato de sodio y agua. Nunca 
+                    uses pasta de dientes para humanos.</p>
+            </div>
+        <div> <img src="imagenes/dientes.jpeg" alt="baño perro" width="200" class="margenImagen"></div>
+
+            <div class="columna">
+                <p><strong>Alternativas:</strong> Ofrecerle 
+                    juguetes masticables y huesos de carnaza 
+                    seguros (supervisado) ayuda a limpiar sus 
+                    dientes de forma natural.</p>  
+            </div>
+            
+        </div>
+
+        <div class="claseBaño">
+            <p><strong> Cuidado de orejas y uñas</strong></p>
+        </div>          
+   
+        <div class="columnas-contenedorHigiene">
+    <div> <img src="imagenes/prejas.jpeg" alt="baño perro" width="200" class="margenImagen"></div>
+            <div class="columna">
+                <p><strong>Limpieza de orejas:</strong> Usa una bolita de algodón 
+                    o una gasa humedecida en agua tibia para 
+                    limpiar la parte exterior de la oreja. Si
+                     ves suciedad dentro, puedes usar una solución 
+                     de agua con un poco de vinagre de manzana. 
+                     Nunca uses hisopos ni introduzcas nada en el 
+                     canal auditivo..</p>
+            </div>
+            <div class="columna">
+                <p><strong>Uñas:</strong> Si no quieres comprar 
+                    un cortauñas, puedes llevarlo a pasear por 
+                    superficies de cemento o asfalto, que ayudan 
+                    a desgastar sus uñas de forma natural. Si aun 
+                    así están muy largas, un veterinario puede 
+                    cortárselas por un costo bajo.</p>  
+            </div>
+     <div> <img src="imagenes/uñas.jpeg" alt="baño perro" width="100" class="margenImagen"></div>
+ 
+        </div>
+    
+    </div>
+</section>
+
+
+
+<section id="Eco-Tips">
+        <h2>Algunos Consejos</h2>
+        <p class="pBlanco">Acciones para detener la expansión de perros sin hogar</p>
+        <p>La sobrepoblación canina es un problema complejo, pero cada persona puede 
+            contribuir a la solución con acciones sencillas y conscientes. Aquí te 
+            presentamos algunas ideas prácticas:</p>
+    <div class="contAdopta">
+        <div class="columna">
+            <p><strong>Adopta, no compres</strong></p>
+            <p>Esta es una de las acciones más importantes. 
+                En lugar de comprar un perro de raza en una 
+                tienda o criadero, considera adoptar a un perro 
+                de un refugio local. Miles de perros sin hogar 
+                esperan una segunda oportunidad para recibir 
+                amor y cuidado. Al adoptar, no solo salvas una 
+                vida, sino que también liberas un espacio en el 
+                refugio para que otro perro pueda ser rescatado</p>
+        </div>
+        <div class="columna" > <img src="imagenes/adopta.jpeg" alt="Adopta" width="200" class="centrar"> </div>
+    </div>
+
+    <div class="contAdopta">
+        <div class="columna"> <img src="imagenes/estiri.jpeg" alt="Adopta" width="200">
+          </div>
+        
+        <div class="columna">
+            <p><strong>La tenencia responsable comienza con la esterilización</strong></p>
+            <p>La esterilización y castración son las herramientas más efectivas
+                 para controlar la sobrepoblación. Un perro y una perra sin esterilizar
+                  pueden producir miles de descendientes en tan solo unos años. 
+                Esterilizar a tu mascota previene camadas no deseadas y, además, 
+                aporta beneficios para su salud, como la prevención de ciertos tipos 
+                de cáncer y problemas de comportamiento.</p>
+        </div>
+      
+    </div>
+
+            <p class="pBlanco"><strong>Refuerza la seguridad de tu hogar</strong></p>
+            <p class="pBlanco">Para proteger a tus animales de granja, como gallinas, 
+                y evitar que sean una fuente de alimento para perros 
+                sin hogar, es crucial tomar medidas de seguridad.</p>    
+
+
+            <div class="columnas-contenedorAdopta">
+            <div class="columna">
+                <p><strong>Gallineros seguros:</strong> 
+                    Construye o refuerza tu gallinero 
+                    para que sea impenetrable. Utiliza 
+                    mallas de alambre resistentes y asegúrate 
+                    de que no haya huecos por donde los perros 
+                    puedan entrar..</p>
+                    <img src="imagenes/gallineros.jpeg" alt="gallinero" width="200">
+            </div>
+            <div class="columna">
+                <p><strong>Acostumbra a los perros a convivir:</strong> 
+                    Si tienes un perro en casa, puedes entrenarlo 
+                    para que conviva pacíficamente con otros animales. 
+                    Esto no solo evitará conflictos, sino que también 
+                    fomenta la tolerancia entre especies.</p>
+                 <img src="imagenes/gallinasYperros.jpeg" alt="gallinero" width="200">
+                     
+            </div>
+ 
+        </div>
+    <p class="pBlanco"><strong>Manejo adecuado de residuos</strong></p>
+            <p class="pBlanco">Los perros callejeros a menudo buscan 
+                comida en la basura, lo que no solo es insalubre para 
+                ellos, sino que también genera un desorden en las calles.</p>
+
+
+    <div class="contAdopta">       
+        <div class="columna">
+            <p><strong>Contenedores de basura seguros:</strong></p>
+            <p>Guarda tu basura en contenedores con tapa que no puedan 
+                ser abiertos fácilmente. Esto evita que los perros la 
+                esparsan por la calle en busca de comida.</p>
+        </div>
+         <div class="columna">
+            <img src="imagenes/basura.jpeg" alt="basura" width="200" class="centrar">
+         </div>
+      
+    </div>
+</section>
+
+<section id="Alertas">
+        <h2>Foro de reportes</h2>
+        <p class="seccionAlerta">Deja tu aviso:</p> 
+
+        <input class="cajasdeinfo" type="text" id="nombre" placeholder="Tu nombre" required>
+        <input class="cajasdeinfo" type="text" id="direccion" placeholder="Tu dirección" required>
+        <textarea class="cajasdeinfo" id="entradaComentario" placeholder="Escribe tu aviso..." required></textarea>
+        <button id="btnEnviar">Enviar</button>
+
+        <h3 class="ULTIMOSavisos">Últimos avisos</h3>
+        <ul id="listaComentarios"></ul>
+</section>
+
+<section id="Evento">
+        <h2>Eventos</h2>
+        <p class="pBlanco">Infórmate sobre las ultimas campañas de vacunación, estirilización o desparasitación.</p>
+<div class="columnas-contenedorEvent">
+    <img src="imagenes/campñest.jpeg" alt="esterilización " width="400">
+</div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+        import { getFirestore, collection, addDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAifNZ1voOdx1WG2qTBcJR4Eg_ie9gwxTo",
+            authDomain: "comunidadweb-56d27.firebaseapp.com",
+            projectId: "comunidadweb-56d27",
+            storageBucket: "comunidadweb-56d27.appspot.com",
+            messagingSenderId: "361838678639",
+            appId: "1:361838678639:web:d4b8d7a211e0846abbb39a",
+            measurementId: "G-N49WZ3BHKP"
+        };
+
+        // Inicializa Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        const comentariosRef = collection(db, "comentarios");
+
+        // Enviar el comentario con nombre y dirección
+        document.getElementById("btnEnviar").addEventListener("click", async () => {
+            const nombre = document.getElementById("nombre").value.trim();
+            const direccion = document.getElementById("direccion").value.trim();
+            const texto = document.getElementById("entradaComentario").value.trim();
+
+            if (nombre && direccion && texto) {
+                await addDoc(comentariosRef, { 
+                    nombre: nombre,
+                    direccion: direccion,
+                    texto: texto,
+                    fecha: new Date().toLocaleString()
+                });
+                document.getElementById("nombre").value = "";
+                document.getElementById("direccion").value = "";
+                document.getElementById("entradaComentario").value = "";
+            } else {
+                alert("Por favor completa todos los campos.");
+            }
+        });
+
+        // Mostrar los comentarios en tiempo real
+        onSnapshot(comentariosRef, (snapshot) => {
+            const lista = document.getElementById("listaComentarios");
+            lista.innerHTML = "";
+            snapshot.forEach((doc) => {
+                const data = doc.data();
+                const li = document.createElement("li");
+                li.innerHTML = `<strong>${data.nombre}</strong> (${data.direccion})<br>${data.texto}<br><em>${data.fecha}</em>`;
+                lista.appendChild(li);
+            });
+        });
+
+        /*Cambiar entre secciones
+        window.mostrarSeccion = function(id) {
+            document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+            document.getElementById(id).classList.add("active");
+        };*/
+
+        window.mostrarSeccion = function(id, elemento) {
+            document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+            document.getElementById(id).classList.add("active");
+
+            document.querySelectorAll("#mainNav a").forEach(a => a.classList.remove("active"));
+            if (elemento) elemento.classList.add("active");
+        };
+
+         window.mostrarSubtip = function(id, elemento) {
+            document.querySelectorAll("#Huellitas .subtip").forEach(div => div.classList.remove("active"));
+            document.getElementById(id).classList.add("active");
+
+            document.querySelectorAll(".subnav a").forEach(a => a.classList.remove("active"));
+            if (elemento) elemento.classList.add("active");
+        };
+    </script>
+
+    <footer>
+        <p>Por: Ithza Aldana | Proyecto de impacto social</p>
+    </footer>
+
+</body>
+</html>

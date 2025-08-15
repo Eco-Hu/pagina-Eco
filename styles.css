@@ -1,0 +1,397 @@
+/* ======== Estilos generales ======== */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #000000;
+}
+
+h1 {
+    font-weight: 800;
+    text-align: center;
+    font-family: inherit;   
+}
+
+h2 {
+
+  font-weight: 600;
+    text-align: center;
+    font-family:Verdana; 
+    font-size: 30px;
+    color:#ffffff;
+}
+
+h3{
+    font-weight: 700;
+    text-align: center;
+    font-family:Verdana; 
+    font-size: 25px;
+    color:#000000;
+    background-color: #ffffff;
+}
+
+h4 {
+    font-size: medium;
+    text-align: center;
+}
+
+h5 {
+    font-size: medium;
+}
+
+
+
+section {
+    padding: 20px;
+    border-bottom: 1px solid #9e9e9e;
+}
+
+ul{
+    font-size: small;
+}
+
+.pNegro{
+    color: #000000;
+}
+.pBlanco{
+    color:#ffffff;
+}
+
+/*===================CLASES INDIVIDUALES===============0*/
+.claseBaño{
+    text-align: center;
+    background-color: #46b850;
+
+}
+
+.ULTIMOSavisos{
+    background-color: #000;
+    color:#ffffff;
+}
+
+
+/* ======== Encabezado y pie ======== */
+header, footer {
+    background-color: #066d0f;
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+}
+
+footer {
+    padding: 10px;
+}
+
+/* ======== Navegación principal ======== */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estado activo en menú principal */
+nav ul li a.active {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* ======== Submenú ======== */
+.subnav {
+    background-color: #066d0f;
+    padding: 10px;
+    text-align: center;
+}
+
+.subnav a {
+    color: white;
+    margin: 0 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Estado activo en submenú */
+.subnav a.active {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* ======== Secciones de subtips ======== */
+.subtip {
+    display: none;
+    padding: 15px;
+    background: #ffffff;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.subtip.active {
+    display: block;
+}
+
+/* ======== Textos y cajas ======== */
+.text1 {
+    text-align: justify;
+    background-color: #819abb;
+    color: #000;
+    font-family:Arial, sans-serif;
+    letter-spacing: 2px;
+    padding: 5px;
+    border: none;
+    font-size:smaller;
+}
+
+.cajasdeinfo {
+    display: block;
+    margin: 20px auto;
+}
+
+.seccionAlerta{
+    color:#ffffff;
+}
+
+/* ======== Contenedores y columnas  Huellitas ======== */
+.contenedor-alimentacion {
+    display: flex;
+    gap: 20px; /* Espacio entre columnas */
+    background-color: #ffffff;
+}
+
+.contenedor-alimentacion .columna {
+    flex: 1;
+    background: #819abb;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.contenedorEspacio{
+   display: flex; 
+    gap: 20px;
+   background-color: #ffffff;
+   color:#070707
+  
+}
+
+.contenedorEspacio .columna {
+    flex: 1;
+    background: #819abb;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.contenedorEspacio2{
+   display: flex; 
+    gap: 20px;
+   background-color: #ffffff;
+   color:#070707
+  
+}
+
+.contenedorEspacio2 .columna {
+    flex: 1;
+    background: #819abb;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.contSalud{
+     display: flex; 
+    gap: 20px;
+   background-color: #ffffff;
+   color:#070707
+}
+
+.contSalud .columna {
+    flex: 1;
+    background: #819abb;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Estilo para el contenedor de las columnas */
+.columnas-contenedorHigiene {
+  display: flex;         /* Convierte el contenedor en un flex container */
+  justify-content: space-between; /* Distribuye el espacio entre las columnas */
+  gap: 20px;             /* Opcional: agrega un espacio uniforme entre las columnas */
+  margin-top: 20px;      /* Opcional: crea un espacio entre el texto del baño y las columnas */
+}
+
+/* Estilo para cada columna individual */
+.columna {
+  flex: 1;              /* Permite que cada columna ocupe el mismo espacio */
+  padding: 15px;        /* Agrega un relleno dentro de cada columna */
+  background-color: #819abb; /* Opcional: color de fondo para distinguirlas */
+  border-radius: 8px;     /* Opcional: esquinas redondeadas */
+}
+
+
+/* ======== Contenedores y columnas EcoTips ======== */
+.contAdopta {
+    text-align: justify;
+    display: flex;
+    gap: 20px; /* Espacio entre columnas */
+    background-color: #000000;
+    margin-bottom: 20px; 
+}
+
+.contAdopta .columna {
+    flex: 1;
+    background: #819abb;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.contAdopta2 {
+    display: flex;
+    gap: 20px; /* Espacio entre columnas */
+    background-color: #000000;
+}
+
+.columnas-contenedorAdopta {
+  display: flex;         /* Convierte el contenedor en un flex container */
+  justify-content: space-between; /* Distribuye el espacio entre las columnas */
+  gap: 20px;             /* Opcional: agrega un espacio uniforme entre las columnas */
+  margin-top: 20px;      /* Opcional: crea un espacio entre el texto del baño y las columnas */
+}
+
+/* Estilo para cada columna individual */
+.columna {
+  flex: 1;              /* Permite que cada columna ocupe el mismo espacio */
+  padding: 15px;        /* Agrega un relleno dentro de cada columna */
+  background-color: #819abb; /* Opcional: color de fondo para distinguirlas */
+  border-radius: 8px;     /* Opcional: esquinas redondeadas */
+}
+
+.centrar{
+justify-content: center;
+  align-items: center;
+}
+
+
+
+/* ======== Contenedores y columnas Eventos ======== */
+
+.columnas-contenedorEvent {
+  display: flex;         /* Convierte el contenedor en un flex container */
+  justify-content: space-between; /* Distribuye el espacio entre las columnas */
+  gap: 20px;             /* Opcional: agrega un espacio uniforme entre las columnas */
+  margin-top: 20px;      /* Opcional: crea un espacio entre el texto del baño y las columnas */
+}
+
+/* Estilo para cada columna individual */
+.columna {
+  flex: 1;              /* Permite que cada columna ocupe el mismo espacio */
+  padding: 15px;        /* Agrega un relleno dentro de cada columna */
+  background-color: #819abb; /* Opcional: color de fondo para distinguirlas */
+  border-radius: 8px;     /* Opcional: esquinas redondeadas */
+}
+
+
+
+/* ======== Estado activo con fondo ======== */
+nav ul li a.active,
+.subnav a.active {
+    background-color: #4caf50; /* Verde más oscuro */
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Resalta enlaces activos del menú principal y submenú */
+.mainNav a.active{
+     background-color: #066d0f; /* Verde más oscuro */
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.subnav a.active {
+    background-color: #2B5288; 
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    
+}
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+/*----IMAGENES----*/
+.imgSalud1{
+    border-color: #ffffff;
+    border-radius: 0%;
+}
+.margenImagen{
+    border-width: 5px; /* Define el grosor del borde */
+    border-style: solid; /* Define el estilo del borde (solid, dashed, dotted, etc.) */
+     border-color: #2B5288; /* Le da color al borde */
+}
+
+.contenedor-flex {
+  display: flex; /* Convierte el contenedor en un "flex container" */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  gap: 20px; /* Crea un espacio entre el texto y la imagen */
+}
+
+.contenedor-flex img {
+  max-width: 300px; /* Asegura que la imagen no sea demasiado grande */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+@media (max-width: 768px) {
+    .contenedor-alimentacion {
+        flex-direction: column; /* Las columnas se apilan */
+    }
+    
+    .columnas-contenedorHigiene{
+        flex-direction: column;
+    }
+
+    .columnas-contenedorAdopta{
+        flex-direction: column; 
+    }
+
+    .columnas-contenedorEvent{
+         flex-direction: column;
+    }
+
+    .contAdopta{
+         flex-direction: column;
+    }
+    .contAdopta2{
+         flex-direction: column;
+    }
+
+    .contenedorEspacio{
+         flex-direction: column;
+    }
+
+    nav ul li {
+        display: block; /* Menú en vertical */
+        margin: 10px 0;
+    }
+
+    .mainNav a.active, 
+    .subnav a.active {
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+}
